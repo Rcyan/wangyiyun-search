@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+	<div class="container">
+	    <div class="page-header">
+	    	<h1>网易云搜索api</h1>
+	    </div>
+        <!-- 搜索歌曲 -->
+		<div class="col-sm-12">
+			<div class="input-group">
+				<input type="text" class="form-control search-text">
+				<span class="input-group-btn">
+				    <button class="btn btn-primary search-btn">点击搜索</button>
+				</span>
+			</div>
+		</div>
+        
+        <!-- 歌曲列表 -->
+		<div class="col-md-7">
+			<div class="panel panel-default">
+			    <div class="panel-heading">
+			    	<h4 class="panel-title">搜索结果</h4>
+			    </div>
+			    <div class="defalut-result panel-body">暂无结果</div>
+			    <ul class="list-group" id="songs-list"></ul>
+			</div>
+		</div>
+        
+        <!-- 歌曲信息 -->
+		<div class="col-md-5">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">歌曲信息</h4>
+				</div>
+				<div class="panel-body">
+					<div class="media">
+					    <div class="defalut-Info">暂无信息</div>
+						<div class="media-left">
+							<a href="#" id="media-img"></a>
+						</div>
+						<div class="media-body" id="song-info"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+        
+        <img>
+	</div>
+
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
