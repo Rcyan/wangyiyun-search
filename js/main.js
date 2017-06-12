@@ -55,7 +55,7 @@ function getSongs(){
                     //3.点击播放
                     var songId=$(this).attr("data-id");
                     $(".play").click(function(){
-			$(".play-iframe").remove();
+                        $(".play-iframe").remove();
                         var oPlay=$("<iframe class='play-iframe' frameborder='no' border='0' marginwidth='0' marginheight='0' width=400 height=86 src='//music.163.com/outchain/player?type=2&id="+songId+"&auto=1&height=66'></iframe>");
                         $(".play-position").append(oPlay);
                         $(".play-iframe").css("margin","10px 0 0 0 -10px");
