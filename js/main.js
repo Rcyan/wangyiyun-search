@@ -12,7 +12,7 @@ $("body").keydown(function(){
 function getSongs(){
 	var keyword=$(".search-text").val();
 	$.ajax({
-		url:"http://s.music.163.com/search/get/",
+		url:"https://s.music.163.com/search/get/",
 		dataType:"jsonp",
 		data:{
 			type:1,
