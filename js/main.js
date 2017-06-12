@@ -24,7 +24,6 @@ function getSongs(){
     		$("#songs-list li").remove();//先移除上一次搜索的li
     		var html;
     		var songLis=data.result.songs;
-    		alert(songLis.length);
     		for(var i=0;i<songLis.length;i++){
 
                 var oLi=$("<li class='list-group-item'>"+"<span>"+(i+1)+"</span>"+"."+"<a>"+songLis[i].name+"--"+songLis[i].artists[0].name+"</a></li>");
