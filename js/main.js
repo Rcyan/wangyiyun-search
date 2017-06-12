@@ -12,7 +12,7 @@ $("body").keydown(function(){
 function getSongs(){
 	var keyword=$(".search-text").val();
 	$.ajax({
-		url:"https://s.music.163.com/search/get/",
+		url:"http://s.music.163.com/search/get/",
 		dataType:"jsonp",
 		data:{
 			type:1,
@@ -49,11 +49,18 @@ function getSongs(){
 	                $(".song-detial").remove();//先移除上一次生成的歌曲信息
 	                var nameSinger=$(this).children("a:eq(0)").text();
 	                var songSrc=$(this).attr("data-src");
-                    var songInfo=$("<div class='song-detial'><h5>"+nameSinger+"</h5><h5>歌曲地址："+songSrc+"</h5><a download href="+songSrc+"><button class='btn btn-primary'>下载</button></a></div>");
+                    var songInfo=$("<div class='song-detial'><h5 style='margin-bottom:20px'>"+nameSinger+"</h5><h5>歌曲地址："+songSrc+"</h5><button class='btn btn-primary play' style='margin:10px 30px 0 0'>播放</button><a download href="+songSrc+"><button style='margin-top:10px' class='btn btn-primary'>下载</button></a></div>");
                     $("#song-info").append(songInfo);
 
-                    //3.查看歌词
-                    // var songId=$(this).attr("data-id");
+                    //3.点击播放
+                    var songId=$(this).attr("data-id");
+                    $(".play").click(function(){
+                        var oPlay=$("<iframe class='play-iframe' frameborder='no' border='0' marginwidth='0' marginheight='0' width=400 height=86 src='//music.163.com/outchain/player?type=2&id="+songId+"&auto=1&height=66'></iframe>");
+                        $(".play-position").append(oPlay);
+                        $(".play-iframe").css("margin","10px 0 0 0 -10px");
+                    });
+
+                    //4.查看歌词
                     // getLyric(songId);
 	        	});
 	        });
